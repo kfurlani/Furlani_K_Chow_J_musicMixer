@@ -29,7 +29,7 @@ body {
 
 .puzzle-board {
 	width: 1072px;
-	background-image: url('../images/puzzleBoard.png');
+	background-image:url(../images/puzzleBoard.png);
 	background-repeat: no-repeat;
   background-size: 100% auto;
   height: 100vh;
