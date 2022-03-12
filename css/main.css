@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body {
+	margin: 4em;
+	border: 0px;
+	background-repeat: no-repeat;
+	background-color: #a1cada;
+	font-family: 'Mirza', cursive;
+	font-size:16px;
+}
+
+#mixer-board {
+	width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.puzzle-image, .puzzle-board {
+	color: inherit;
+	overflow: hidden;
+}
+
+.puzzle-image {
+	width: 200px;
+  border: 4px solid #90b9c9;
+	border-radius: 10px;
+}
+
+.puzzle-board {
+	width: 1072px;
+	background-image: url('../images/puzzleBoard.png');
+	background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 100vh;
+}
+
+.left {
+  align-items: center;
+}
+
+.right {
+  align-items: center;
+}
+
+header h1 {
+  font-size: 3.25em;
+  letter-spacing: 3px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 2em;
+  margin: 0px auto;
+  text-align: center;
+}

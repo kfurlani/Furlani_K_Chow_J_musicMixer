@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/main.css">
-
-    <title>Sounds of Nature Music Mixer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nature Music Mixer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mirza:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css" type="text/css">
 </head>
 <body>
-    
+  <header id="headLine">
+    <h1>NATURE MUSIC MIXER</h1>
+  </header>
+  <section id="mixer-board">
+    <!-- these are the draggable pieces on the left-->
+    <div class="puzle-pieces left">
+      <img id="topLeft" alt=""draggable="true" src="images/icons/topLeft.png" class="puzzle-image" alt="top left">
+      <img id="topMid" alt=""draggable="true" src="images/icons/topMid.png" class="puzzle-image" alt="top middle">
+      <img id="topRight" alt=""draggable="true" src="images/icons/topRight.png" class="puzzle-image" alt="top right">
+    </div>
 
+    <!-- draggable pieces will be dropped here -->
+    <div class="puzzle-board">
+			<div class="drop-zone tl"></div>
+      <div class="drop-zone tm"></div>
+			<div class="drop-zone tr"></div>
+			<div class="drop-zone bl"></div>
+			<div class="drop-zone bm"></div>
+			<div class="drop-zone br"></div>
+		</div>
 
+    <!-- these are the draggable pieces on the right-->
+    <div class="puzle-pieces right">
+      <img id="bottomLeft" alt=""draggable="true" src="images/icons/bottomLeft.png" class="puzzle-image" alt="bottom left">
+      <img id="bottomMid" alt=""draggable="true" src="images/icons/bottomMid.png" class="puzzle-image" alt="bottom middle">
+      <img id="bottomRight" alt=""draggable="true" src="images/icons/bottomRight.png" class="puzzle-image" alt="bottom right">
+    </div>
+  </section>
+  <footer>
+    <p>Drag and drop icons onto the scene to make the sound and start to compose your mix with nature sounds.</p>
+  </footer>
 
-
-
-<script src="js/main.js"></scriptsrc>></script>
+  <script src="script/main.js"></script>
 </body>
 </html>
+
