@@ -9,7 +9,7 @@ For this project, an interactive music mixer will be built using design and moti
 5. Submit a pull request :D
 
 ## Credits
-Krystal Furlani
+Krystal Furlani\
 Hei Yan CHOW, Joanna
 
 ## License
