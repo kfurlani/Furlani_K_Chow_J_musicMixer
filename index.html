@@ -17,9 +17,9 @@
   <section id="mixer-board">
     <!-- these are the draggable pieces on the left-->
     <div class="puzzle-pieces left">
-      <img id="topLeft" alt=""draggable="true" src="images/icons/topLeft.png" class="puzzle-image" alt="top left">
-      <img id="topMid" alt=""draggable="true" src="images/icons/topMid.png" class="puzzle-image" alt="top middle">
-      <img id="topRight" alt=""draggable="true" src="images/icons/topRight.png" class="puzzle-image" alt="top right">
+      <img id="topLeft" data-drop="0" alt=""draggable="true" src="images/icons/topLeft.png" class="puzzle-image" alt="top left">
+      <img id="topMid" data-drop="1" alt=""draggable="true" src="images/icons/topMid.png" class="puzzle-image" alt="top middle">
+      <img id="topRight" data-drop="2" alt=""draggable="true" src="images/icons/topRight.png" class="puzzle-image" alt="top right">
     </div>
 
     <!-- draggable pieces will be dropped here -->
@@ -34,17 +34,25 @@
 
     <!-- these are the draggable pieces on the right-->
     <div class="puzzle-pieces right">
-      <img id="bottomLeft" alt=""draggable="true" src="images/icons/bottomLeft.png" class="puzzle-image" alt="bottom left">
-      <img id="bottomMid" alt=""draggable="true" src="images/icons/bottomMid.png" class="puzzle-image" alt="bottom middle">
-      <img id="bottomRight" alt=""draggable="true" src="images/icons/bottomRight.png" class="puzzle-image" alt="bottom right">
+      <img id="bottomLeft" data-drop="3" alt=""draggable="true" src="images/icons/bottomLeft.png" class="puzzle-image" alt="bottom left">
+      <img id="bottomMid" data-drop="4" alt=""draggable="true" src="images/icons/bottomMid.png" class="puzzle-image" alt="bottom middle">
+      <img id="bottomRight" data-drop="5" alt=""draggable="true" src="images/icons/bottomRight.png" class="puzzle-image" alt="bottom right">
     </div>
   </section>
 
-  <section class="audio">
+  <!-- <section class="audio">
     <audio src="audio/test_topRight.mp3"></audio>
     <audio src="audio/test_topLeft.mp3"></audio>
     <audio src="audio/test_topMid.mp3"></audio>
-  </section>
+  </section> -->
+
+  <audio data-drop="0" src="audio/test_topRight.mp3" ></audio>
+  <audio data-drop="1" src="audio/test_topMid.mp3" ></audio>
+  <audio data-drop="2" src="audio/test_topLeft.mp3"></audio>
+  <audio data-drop="3" src="audio/test_bottomRight.mp3" ></audio>
+  <audio data-drop="4" src="audio/test_bottomMid.mp3"></audio>
+  <audio data-drop="5" src="audio/test_bottomLeft.mp3"></audio>
+
 
   <footer>
     <p>Drag and drop icons onto the scene to make the sound and start to compose your mix with nature sounds.</p>

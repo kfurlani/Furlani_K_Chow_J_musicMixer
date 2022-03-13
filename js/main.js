@@ -1,8 +1,7 @@
 (() => {
     let puzzlePieces = document.querySelectorAll('.puzzle-pieces *'),
         dropZones = document.querySelectorAll('.drop-zone'),
-        theDropBoard = document.querySelector('.puzzle-board'),
-        theAudio = document.querySelector("audio");
+        theDropBoard = document.querySelector('.puzzle-board');
 
     function startDrag (event) {
         console.log('start dragging');
@@ -19,16 +18,17 @@
 		event.preventDefault ();
 		console.log('dropped on board');
 		let currentEl =
-          event.dataTransfer.getData('draggedElement');
+      event.dataTransfer.getData('draggedElement');
 
 		console.log(`dropped this element:`, currentEl);
 		this.appendChild(document.querySelector(`#${currentEl}`));
 
 // In the stage, there is only one audio track playing at a time. Will try to create another function that allow mutiple audios to be played in the same time
-    theAudio.src = `audio/test_${currentEl}.mp3`;
-    console.log(theAudio);
-    theAudio.load();
-    theAudio.play();
+    let audioIndex = document.querySelector(`#${currentEl}`).dataset.drop;
+    let audioClip = document.querySelector((`audio[data-drop="${audioIndex}"]`));
+
+    audioClip.play();
+    audioClip.loop = true;
 	}
 
     puzzlePieces.forEach(piece => piece.addEventListener('dragstart', startDrag));
