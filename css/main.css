@@ -55,3 +55,65 @@ footer p {
   margin: 0px auto;
   text-align: center;
 }
+
+.puzzle-image {
+	width: 40%;
+	display: block;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.puzzle-image:nth-child(even) {
+	float: right;
+	clear: both;
+}
+
+.puzzle-image:nth-child(odd) {
+	float: left;
+	clear: both;
+}
+
+.drop-zone {
+	width: 33%;
+  height: 45%;
+  border: thin dashed white;
+  float: left;
+	position: relative;
+}
+
+.drop-zone img {
+	float: none;
+	padding: 0;
+	width: 80%;
+	position: absolute;
+}
+
+.tl img {
+	right:0;
+	bottom: 0;
+}
+
+.tr img {
+	left:0;
+	bottom: 0;
+}
+
+.tm img {
+	left:0;
+	bottom: 0;
+}
+
+.bl img {
+	right:0;
+	top: 0;
+}
+
+.br img {
+	left:0;
+	bottom: 0;
+}
+
+.bm img {
+	left:0;
+	bottom: 0;
+}
