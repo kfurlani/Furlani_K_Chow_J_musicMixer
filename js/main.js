@@ -23,7 +23,6 @@
 		console.log(`dropped this element:`, currentEl);
 		this.appendChild(document.querySelector(`#${currentEl}`));
 
-// In the stage, there is only one audio track playing at a time. Will try to create another function that allow mutiple audios to be played in the same time
     let audioIndex = document.querySelector(`#${currentEl}`).dataset.drop;
     let audioClip = document.querySelector((`audio[data-drop="${audioIndex}"]`));
 
