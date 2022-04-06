@@ -2,8 +2,8 @@
     let puzzlePieces = document.querySelectorAll('.puzzle-pieces *'),
         dropZones = document.querySelectorAll('.drop-zone'),
         theDropBoard = document.querySelector('.puzzle-board'),
-        resetPieces = document.querySelectorAll('resetButton'),
-        theSound = document.querySelector('audio'),
+        resetPieces = document.querySelector('#resetButton'),
+        
         playButton = document.getElementById('playButton'),
         pauseButton = document.getElementById('pauseButton');
     // lottie animation
@@ -30,22 +30,13 @@
   		console.log(`dropped this element:`, currentEl);
   		this.appendChild(document.querySelector(`#${currentEl}`));
 
-      function resetImgs (){
-        dropZones.forEach(zone => {
-           if (zone.childElementCount > 0) {
-                resetPieces.appendChild(zone.firstElementChild);
-            }
-        })
-    }
 
       let audioIndex = document.querySelector(`#${currentEl}`).dataset.drop;
       let audioClip = document.querySelector((`audio[data-drop="${audioIndex}"]`));
 
       audioClip.play();
       audioClip.loop = true;
-
-      function playSound(event) {theSound.play();}
-      function pauseSound(event){theSound.pause();}
+    
 
       if (currentEl == "topLeft") {
         // play lottie animation
@@ -58,18 +49,42 @@
           path: "data/birdsFly.json"
         })
 
-        function playAnimation() {
-          birdAnim.play();
-        }
+      
       }
   	}
-    //resetPieces.addEventListener('click, resetImgs');
-    //playButton.addEventListener('click, playSound');
-    //pauseButton.addEventListener('click, pauseSound');
+   // function playAnimation() {
+//birdAnim.play();
+   // }
+
+    function resetImgsAll (){
+      dropZones.forEach(zone => {
+         if (zone.childElementCount > 0) {
+              resetPieces.appendChild(zone.firstElementChild);
+          }
+      })
+     }
+
+    function playSound() {
+          theSounds = document.querySelectorAll('audio');
+          theSounds.forEach(sound => sound.play());
+    }
+
+
+    function pauseSound(){
+      // grab all the audio elements
+      theSounds = document.querySelectorAll('audio');
+      // make them all pause
+      theSounds.forEach(sound => sound.pause());
+    }
+
     puzzlePieces.forEach(piece => piece.addEventListener('dragstart', startDrag));
     dropZones.forEach(zone => {
         zone.addEventListener ('dragover' , draggedOver);
         zone.addEventListener('drop' , handleDrop);
        });
+
+    playButton.addEventListener('click', playSound);
+    pauseButton.addEventListener('click', pauseSound);   
+    resetPieces.addEventListener('click', resetImgsAll);
 
 })();
