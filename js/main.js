@@ -17,8 +17,9 @@
 	function handleDrop (event) {
 		event.preventDefault ();
 		console.log('dropped on board');
-		let currentEl =
-      event.dataTransfer.getData('draggedElement');
+        if (this.childElementCount > 0) {return;}
+
+		let currentEl = event.dataTransfer.getData('draggedElement');
 
 		console.log(`dropped this element:`, currentEl);
 		this.appendChild(document.querySelector(`#${currentEl}`));
