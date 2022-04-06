@@ -1,66 +1,44 @@
 @charset "UTF-8";
 
 body {
-	margin: 4em;
+	margin: 2em;
 	border: 0px;
 	background-repeat: no-repeat;
-	background-color: #a1cada;
+	background-color: #F2F1F8;
 	font-family: 'Mirza', cursive;
 	font-size:16px;
 }
 
 #mixer-board {
 	width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+	text-align: center;
+	margin: 50px 0;
 }
 
-.puzzle-image, .puzzle-board {
-	color: inherit;
+.puzzle-pieces, .puzzle-board {
+	margin: 5px;
+	height: 480px;
+	display: inline-block;
 	overflow: hidden;
 }
 
-.puzzle-image {
+.puzzle-pieces {
 	width: 200px;
-  border: 4px solid #90b9c9;
-	border-radius: 10px;
 }
 
 .puzzle-board {
-	width: 1072px;
+	width: 610px;
 	background-image:url(../images/puzzleBoard.png);
 	background-repeat: no-repeat;
   background-size: 100% auto;
-  height: 100vh;
-}
-
-.left {
-  align-items: center;
-}
-
-.right {
-  align-items: center;
-}
-
-header h1 {
-  font-size: 3.25em;
-  letter-spacing: 3px;
-  margin: 40px 0;
-  text-align: center;
-}
-
-footer p {
-  font-size: 2em;
-  margin: 0px auto;
-  text-align: center;
 }
 
 .puzzle-image {
-	width: 40%;
+	width: 50%;
 	display: block;
-	padding: 8px;
 	cursor: pointer;
+	background-color: #90b9c9;
+	margin: 20px;
 }
 
 .puzzle-image:nth-child(even) {
@@ -75,7 +53,7 @@ footer p {
 
 .drop-zone {
 	width: 33%;
-  height: 45%;
+  height: 49.5%;
   border: thin dashed white;
   float: left;
 	position: relative;
@@ -84,7 +62,8 @@ footer p {
 .drop-zone img {
 	float: none;
 	padding: 0;
-	width: 80%;
+	margin: 0;
+	width: 100%;
 	position: absolute;
 }
 
@@ -116,6 +95,32 @@ footer p {
 .bm img {
 	left:0;
 	bottom: 0;
+}
+
+.bird-anim {
+	position: absolute;
+	top: 0;
+	left: 30%;
+	width: 20%;
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+header h1 {
+  font-size: 3.25em;
+  letter-spacing: 3px;
+  margin: 20px 0;
+  text-align: center;
+	color: #2C3B42;
+}
+
+footer p {
+  font-size: 2em;
+  margin: 20px auto;
+	line-height: 1em;
+  text-align: center;
+	max-width: 700px;
+	color: #2C3B42;
 }
 
 /* Layout of the puzzle board and pieces need to be improved */
