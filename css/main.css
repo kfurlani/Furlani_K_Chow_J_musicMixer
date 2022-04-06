@@ -123,4 +123,16 @@ footer p {
 	color: #2C3B42;
 }
 
+#pauseButton {
+	cursor: pointer;
+}
+
+#playButton {
+	cursor: pointer;
+}
+
+#resetButton {
+	cursor: pointer;
+}
+
 /* Layout of the puzzle board and pieces need to be improved */
